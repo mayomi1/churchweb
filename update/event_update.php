@@ -31,13 +31,13 @@ if(isset($_SESSION['uid'])) {
             $error = 1;
         }
 
-        if(realDate($event_date)){
+        /**if(realDate($event_date)){
             true;
         }
         else{
             $errD = " incorrect date format should be in dd/mm/yyyy ";
             $error = 1;
-        }
+        }*/
 
         if (empty($event_date)) {
             $errEventDate = "event date cannot be empty";
@@ -82,6 +82,7 @@ if(isset($_SESSION['uid'])) {
 
     <link rel="stylesheet" href="../css/bootstrap.css">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../js/jquery-ui-1.12.0.custom/jquery-ui.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -141,5 +142,11 @@ if(isset($_SESSION['uid'])) {
 
     <script src="../js/jquery.js"></script>
     <script src="../js/bootstrap.js"></script>
+    <script src="../js/jquery-ui-1.12.0.custom/jquery-ui.js"></script>
+     <script>
+         $(function () {
+        $("#event_date").datepicker({ dateFormat : 'dd/mm/yy' });
+        })
+    </script>
 </body>
 </html>
