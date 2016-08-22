@@ -1,0 +1,133 @@
+
+
+
+    /*********************begin*********************************/
+
+
+
+/**oomac logo**/
+.Layer {
+    background-image: url("../images/ooma.jpg");
+    position: absolute;
+    left: 63px;
+    top: 14px;
+    width: 340px;
+    height: 76px;
+    z-index: 2;
+}
+
+.logo{
+    position:absolute; width:340px; height:76px;
+    left:0; top:0; margin:0;
+    background: url("../images/ooma.jpg") no-repeat;
+}
+.error{
+    color: red;
+}
+.message{
+    color: green;
+}
+.event_margin{
+    margin-left: 75px;
+}
+.vr{
+    border-left: 1px solid black;
+    height: 300px;
+    position: absolute;
+    left: 150px;
+
+}
+.blog ul li a{
+     padding:3px 10px; margin:20px 10px; text-decoration:none;
+    display:block; width:260px;
+    border-left:1px solid dimgray; border-right:2px solid black;
+    border-top:1px solid dimgray; border-bottom:2px solid black; }
+.blog a:link { color:black; background-color:white; }
+.blog a:visited { color:gray; background-color:white; }
+.blog a:hover { color:white; background-color:cornflowerblue; }
+.blog a:active, a:focus { color:cornflowerblue; background-color: black; }
+
+/*******************************pagination***********************************/
+div.pagination {
+    padding: 3px;
+    margin: 3px;
+}
+
+div.pagination a {
+    padding: 2px 5px 2px 5px;
+    margin: 2px;
+    border: 1px solid #AAAADD;
+
+    text-decoration: none; /* no underline */
+    color: #000099;
+}
+div.pagination a:hover, div.pagination a:active {
+    border: 1px solid #000099;
+
+    color: #000;
+}
+div.pagination span.current {
+    padding: 2px 5px 2px 5px;
+    margin: 2px;
+    border: 1px solid #000099;
+
+    font-weight: bold;
+    background-color: #000099;
+    color: #FFF;
+}
+div.pagination span.disabled {
+    padding: 2px 5px 2px 5px;
+    margin: 2px;
+    border: 1px solid #EEE;
+
+    color: #DDD;
+}
+
+/*******tabs ******/
+
+body {
+    color: #666;
+    font: 14px/24px "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", Sans-Serif;
+}
+.tabs {
+    max-width: 538px;
+}
+.tabs-nav li {
+    float: left;
+    width: 50%;
+}
+.tabs-nav li:first-child .tabs-a  {
+    border-right: 0;
+    border-top-left-radius: 6px;
+}
+.tabs-nav li:last-child .tabs-a  {
+    border-top-right-radius: 6px;
+}
+.tabs-a   {
+    background: #eaeaed;
+    border: 1px solid #cecfd5;
+    color: #0087cc;
+    display: block;
+    font-weight: 600;
+    padding: 10px 0;
+    text-align: center;
+    text-decoration: none;
+}
+.tabs-a :hover {
+    color: #ff7b29;
+}
+.tab-active .tabs-a  {
+    background: #fff;
+    border-bottom-color: transparent;
+    color: #2db34a;
+    cursor: default;
+}
+.tabs-stage {
+    border: 1px solid #cecfd5;
+    border-radius: 0 0 6px 6px;
+    border-top: 0;
+    clear: both;
+    padding: 24px 30px;
+    position: relative;
+    top: -1px;
+}
