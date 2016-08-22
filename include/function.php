@@ -229,7 +229,7 @@ function units_decoration(){
 }
 
 // to make sure that the date is in dd/mm/yyyy format
-function realDate($date){
+/**function realDate($date){
     error_reporting(0);
     if(false===strtotime($date)){
         return false;
@@ -240,57 +240,9 @@ function realDate($date){
         }
     }
     return true;
-}
+}*/
 
 
-function image4blog($upimage,$g_picture){
-    global $g_image, $error, $errImageNotSet, $messageImageName, $errNotImage, $errImageExist;
-    global $errTooLarge, $errEXT, $errNotUploaded, $messageSuccess, $errImage;
-
-
-    $errImageNotSet= $errNotImage=$errImageExist=$errTooLarge= $errEXT= $errNotUploaded= $errImage="";
-    $messageSuccess=$messageImageName="";
-    $target_dir = "$upimage";
-    $g_image = $_FILES["$g_picture"]["name"];
-    $target_file = $target_dir . basename($_FILES["$g_picture"]["name"]);
-    $uploadOk = 1;
-    $imageFileType = strtolower(pathinfo($target_file,PATHINFO_EXTENSION));
-// Check if image file is a actual image or fake image
-
-// Check if file already exists
-    if (file_exists($target_file)) {
-        $errImageExist= "Sorry, file already exists.";
-        $uploadOk = 0;
-    }
-// Check file size
-    if ($_FILES["$g_picture"]["size"] > 5000000) {
-        $errTooLarge= "Sorry, your file is too large.";
-        $uploadOk = 0;
-    }
-// Allow certain file formats
-    if($imageFileType != "jpg" && $imageFileType != "png" && $imageFileType != "jpeg"
-        && $imageFileType != "gif" ) {
-        $errEXT= "Sorry, only JPG, JPEG, PNG & GIF files are allowed.";
-        $uploadOk = 0;
-    }
-// Check if $uploadOk is set to 0 by an error
-    if ($uploadOk == 0) {
-        $errNotUploaded= "Sorry, your file was not uploaded.";
-        $error =1;
-// if everything is ok, try to upload file
-    } else {
-        if($error!=1) {
-            if (move_uploaded_file($_FILES["$g_picture"]["tmp_name"], $target_file)) {
-                $messageSuccess= "The file " . basename($_FILES["$g_picture"]["name"]) . " has been uploaded.";
-            } else {
-                $errImage= "Sorry, there was an error uploading your file.";
-            }
-        }
-        else
-        {$errImage= "error has occur, please check and try again";}
-    }
-
-}// end of image function
 
 
 
